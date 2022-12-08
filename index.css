@@ -1,0 +1,291 @@
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --primaryColor: #0076de;
+    --whiteColor: #fff;
+    --orangeColor: rgb(239, 145, 3);
+    --blackColor: #333;
+    --greyColor: #f6f8fa;
+    --labelColor: #64b1f5;
+    --yellowColor: #ffd723;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Nunita', sans-serif;
+}
+body{
+    width: 100%;
+    height: auto;
+}
+h1{
+    line-height: 1.5;
+}
+.navbar {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 1rem 2.5rem;
+    z-index: 10;
+    color: var(--whiteColor);
+    background: var(--blackColor);
+}
+.navbar-logo > a{
+    letter-spacing: 2.5;
+    text-decoration: none;
+    color: var(--whiteColor); 
+}
+.navbar-menu {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+.navbar-menu > a {
+    color: var(--whiteColor);
+    text-decoration: none;
+}
+.menu-toggle{
+    display: none;
+}
+.menu-toggle .bar{
+    width: 15px;
+    height: 2px;
+    margin: 3px auto;
+    transition: all 0.3 ease-in-out;
+    background-color: var(--orangeColor);
+    cursor: pointer;
+}
+
+header{
+    width: 100%;
+    height: 80%;
+    background-image: url("images/header-image.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+.header-title{
+    position: absolute;
+    top: 7rem;
+    left: 3rem;
+    letter-spacing: 3;
+    font-weight: bolder;
+    font-size: 52px;
+    color: var(--whiteColor);
+    text-shadow: 4px 2px 0px rgb(0,0,0,0.2);
+}
+.header-title > span {
+    color: var(--primaryColor);
+}
+
+
+
+.scroll{
+    position: fixed;
+    top: 92%;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #000;
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    font-size: 15px;
+    text-decoration: none;
+    z-index: 10000;
+}
+.scroll.top{
+    top: calc(95% - 80px);
+    background: rgb(195, 33, 33);
+}
+.scroll.bottom{
+    top: calc(50% - 0);
+    background: rgb(15, 107, 205);
+}
+
+
+
+
+
+
+
+.container{
+    position: relative;
+    top: 42rem;
+    padding: 20px;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+}
+.box{
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    background: var(--yellowColor);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+.box img{
+    height: 150px;
+    width: 250px;
+}
+.box h3{
+    color: rgb(0, 0, 0);
+    padding: 10px 0;
+    font-size: 20px;
+}
+.box p{
+    color: var(--blackColor);
+    font-size: 14px;
+    line-height: 1.6;
+}
+.btn{
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 17px;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #333;
+    border-radius: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+.btn:hover{
+    letter-spacing: 1px;
+}
+.box:hover{
+    transform: scale(1.03);
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.signup{
+    width: 100%;
+    height: 350px;
+    background-image: url("images/join.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--greyColor);
+    display: flex;
+    top: 45rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    align-items: center;
+    position: relative;
+}
+.signup::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(0, 85, 177, 0.6) 0%, rgba(0, 122, 255, 0.5)100% ), 
+    linear-gradient(180deg, rgba(0, 122, 255, 0.65) 0%, transparent 100%);
+    z-index: 1;
+}
+.signup-detail{
+    min-width: 280px;
+    width: 50%;
+    z-index: 2;
+    margin-bottom: 1rem;
+}
+.signup-detail > h1{
+    font-size: 36px;
+    letter-spacing: 2;
+}
+.signup-button{
+    width: 180px;
+    padding: 1rem;
+    border: none;
+    color: var(--blackColor);
+    background-color: var(--yellowColor);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 2;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+}
+.signup-button:hover{
+    background: transparent;
+    border: 5px solid var(--orangeColor);
+    color: var(--orangeColor);
+}
+
+
+
+footer{
+    width: 100%;
+    display: flex;
+    position: relative;
+    top: 51rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    background: var(--blackColor);
+    color: var(--orangeColor);
+    padding: 3rem;
+    text-decoration: none;
+}
+.footer-wrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.footer-wrapper h3,
+.footer-wrapper h4{
+    line-height: 3;
+    color: var(--yellowColor);
+}
+.footer-wrapper p{
+    max-width: 400px;
+    line-height: 1.5;
+}
+.social-media{
+    margin-top: 1rem;
+}
+.social-media a{
+    text-decoration: none;
+    color: var(--greyColor);
+    margin-right: 10px;
+}
+
+.footer-wrapper a{
+    text-decoration: none;
+    color: var(--greyColor);
+    line-height: 2;
+}
+
+.footer-wrapper a:hover{
+    text-decoration: underline;
+}
+.contact-button{
+    width: 150px;
+    padding: 1rem;
+    border: none;
+    text-decoration: none;
+    color: var(--blackColor);
+    background-color: var(--yellowColor);
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 18px;
+}
+.contact-button:hover{
+    background: transparent;
+    border: 1px solid var(--orangeColor);
+    color: var(--orangeColor);
+}
